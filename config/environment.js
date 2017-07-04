@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -15,6 +16,20 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+    },
+
+    firebase: {
+      apiKey: 'AIzaSyAhHETQtpifNm3RcYRX4ftBDMr_ps0FLis',
+      authDomain: 'ember-library-app-b5b81.firebaseapp.com',
+      databaseURL: 'https://ember-library-app-b5b81.firebaseio.com',
+      storageBucket: 'ember-library-app-b5b81.appspot.com',
+      messagingSenderId: "365672483281"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
     },
 
     APP: {
